@@ -1,0 +1,78 @@
+[19-Jul-2017 18:08:34 Asia/Yekaterinburg] PHP Warning:  require_once(/home/nikll/projects/test_ural_soft/libs/functions.php_orig): failed to open stream: No such file or directory in /home/nikll/projects/test_ural_soft/app.php on line 36
+[19-Jul-2017 18:08:34 Asia/Yekaterinburg] PHP Stack trace:
+[19-Jul-2017 18:08:34 Asia/Yekaterinburg] PHP   1. {main}() /home/nikll/projects/test_ural_soft/www/index.php:0
+[19-Jul-2017 18:08:34 Asia/Yekaterinburg] PHP   2. require_once() /home/nikll/projects/test_ural_soft/www/index.php:2
+[19-Jul-2017 18:08:34 Asia/Yekaterinburg] PHP Fatal error:  require_once(): Failed opening required '/home/nikll/projects/test_ural_soft/libs/functions.php_orig' (include_path='.:/usr/local/share/pear:/home/nikll/projects/test_ural_soft/libs/:/home/nikll/projects/test_ural_soft/templates/:/home/nikll/projects/test_ural_soft/') in /home/nikll/projects/test_ural_soft/app.php on line 36
+[19-Jul-2017 18:08:34 Asia/Yekaterinburg] PHP Stack trace:
+[19-Jul-2017 18:08:34 Asia/Yekaterinburg] PHP   1. {main}() /home/nikll/projects/test_ural_soft/www/index.php:0
+[19-Jul-2017 18:08:34 Asia/Yekaterinburg] PHP   2. require_once() /home/nikll/projects/test_ural_soft/www/index.php:2
+[19-Jul-2017 18:08:44 Asia/Yekaterinburg] PHP Fatal error:  Uncaught exception 'exceptions\QueryException' with message 'Unknown column 'm.author' in 'where clause'' in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php:25
+Stack trace:
+#0 /home/nikll/projects/test_ural_soft/libs/db/Db.php(49): exceptions\QueryException::create('Unknown column ...', 1054, '\n        select...')
+#1 /home/nikll/projects/test_ural_soft/libs/db/Db.php(59): db\Db->real_query('\n        select...')
+#2 /home/nikll/projects/test_ural_soft/libs/db/Db.php(108): db\Db->query('\n        select...')
+#3 /home/nikll/projects/test_ural_soft/app.php(94): db\Db->fetch_all('\n        select...')
+#4 /home/nikll/projects/test_ural_soft/www/index.php(2): require_once('/home/nikll/pro...')
+#5 {main}
+  thrown in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php on line 25
+[19-Jul-2017 18:09:15 Asia/Yekaterinburg] PHP Fatal error:  Call to undefined function html2txt() in /home/nikll/projects/test_ural_soft/libs/functions.php on line 65
+[19-Jul-2017 18:09:15 Asia/Yekaterinburg] PHP Stack trace:
+[19-Jul-2017 18:09:15 Asia/Yekaterinburg] PHP   1. {main}() /home/nikll/projects/test_ural_soft/www/index.php:0
+[19-Jul-2017 18:09:15 Asia/Yekaterinburg] PHP   2. require_once() /home/nikll/projects/test_ural_soft/www/index.php:2
+[19-Jul-2017 18:09:15 Asia/Yekaterinburg] PHP   3. filter($val = 'test', $type = 'nohtml') /home/nikll/projects/test_ural_soft/app.php:68
+[19-Jul-2017 18:10:51 Asia/Yekaterinburg] PHP Fatal error:  Uncaught exception 'exceptions\QueryException' with message 'Cannot add or update a child row: a foreign key constraint fails (`forum`.`themes`, CONSTRAINT `author_ref` FOREIGN KEY (`author`) REFERENCES `authors` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)' in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php:25
+Stack trace:
+#0 /home/nikll/projects/test_ural_soft/libs/db/Db.php(49): exceptions\QueryException::create('Cannot add or u...', 1452, 'INSERT INTO `th...')
+#1 /home/nikll/projects/test_ural_soft/libs/db/Db.php(186): db\Db->real_query('INSERT INTO `th...')
+#2 /home/nikll/projects/test_ural_soft/app.php(68): db\Db->insert('themes', Array)
+#3 /home/nikll/projects/test_ural_soft/www/index.php(2): require_once('/home/nikll/pro...')
+#4 {main}
+  thrown in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php on line 25
+[19-Jul-2017 18:11:13 Asia/Yekaterinburg] PHP Notice:  Undefined index: theme in /home/nikll/projects/test_ural_soft/app.php on line 73
+[19-Jul-2017 18:11:13 Asia/Yekaterinburg] PHP Stack trace:
+[19-Jul-2017 18:11:13 Asia/Yekaterinburg] PHP   1. {main}() /home/nikll/projects/test_ural_soft/www/index.php:0
+[19-Jul-2017 18:11:13 Asia/Yekaterinburg] PHP   2. require_once() /home/nikll/projects/test_ural_soft/www/index.php:2
+[19-Jul-2017 18:11:13 Asia/Yekaterinburg] PHP Fatal error:  Uncaught exception 'exceptions\QueryException' with message 'Cannot add or update a child row: a foreign key constraint fails (`forum`.`messages`, CONSTRAINT `theme` FOREIGN KEY (`theme`) REFERENCES `themes` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)' in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php:25
+Stack trace:
+#0 /home/nikll/projects/test_ural_soft/libs/db/Db.php(49): exceptions\QueryException::create('Cannot add or u...', 1452, 'INSERT INTO `me...')
+#1 /home/nikll/projects/test_ural_soft/libs/db/Db.php(186): db\Db->real_query('INSERT INTO `me...')
+#2 /home/nikll/projects/test_ural_soft/app.php(73): db\Db->insert('messages', Array)
+#3 /home/nikll/projects/test_ural_soft/www/index.php(2): require_once('/home/nikll/pro...')
+#4 {main}
+  thrown in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php on line 25
+[19-Jul-2017 18:26:08 Asia/Yekaterinburg] PHP Fatal error:  Uncaught exception 'exceptions\QueryException' with message 'Unknown column 'm.author' in 'where clause'' in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php:25
+Stack trace:
+#0 /home/nikll/projects/test_ural_soft/libs/db/Db.php(49): exceptions\QueryException::create('Unknown column ...', 1054, '\n        select...')
+#1 /home/nikll/projects/test_ural_soft/libs/db/Db.php(59): db\Db->real_query('\n        select...')
+#2 /home/nikll/projects/test_ural_soft/libs/db/Db.php(108): db\Db->query('\n        select...')
+#3 /home/nikll/projects/test_ural_soft/app.php(96): db\Db->fetch_all('\n        select...')
+#4 /home/nikll/projects/test_ural_soft/www/index.php(2): require_once('/home/nikll/pro...')
+#5 {main}
+  thrown in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php on line 25
+[19-Jul-2017 18:28:25 Asia/Yekaterinburg] PHP Fatal error:  Uncaught exception 'exceptions\QueryException' with message 'Unknown column 'm.author' in 'where clause'' in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php:25
+Stack trace:
+#0 /home/nikll/projects/test_ural_soft/libs/db/Db.php(49): exceptions\QueryException::create('Unknown column ...', 1054, '\n        select...')
+#1 /home/nikll/projects/test_ural_soft/libs/db/Db.php(59): db\Db->real_query('\n        select...')
+#2 /home/nikll/projects/test_ural_soft/libs/db/Db.php(108): db\Db->query('\n        select...')
+#3 /home/nikll/projects/test_ural_soft/app.php(97): db\Db->fetch_all('\n        select...')
+#4 /home/nikll/projects/test_ural_soft/www/index.php(2): require_once('/home/nikll/pro...')
+#5 {main}
+  thrown in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php on line 25
+[19-Jul-2017 18:28:25 Asia/Yekaterinburg] PHP Fatal error:  Uncaught exception 'exceptions\QueryException' with message 'Unknown column 'm.author' in 'where clause'' in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php:25
+Stack trace:
+#0 /home/nikll/projects/test_ural_soft/libs/db/Db.php(49): exceptions\QueryException::create('Unknown column ...', 1054, '\n        select...')
+#1 /home/nikll/projects/test_ural_soft/libs/db/Db.php(59): db\Db->real_query('\n        select...')
+#2 /home/nikll/projects/test_ural_soft/libs/db/Db.php(108): db\Db->query('\n        select...')
+#3 /home/nikll/projects/test_ural_soft/app.php(97): db\Db->fetch_all('\n        select...')
+#4 /home/nikll/projects/test_ural_soft/www/index.php(2): require_once('/home/nikll/pro...')
+#5 {main}
+  thrown in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php on line 25
+[19-Jul-2017 18:28:27 Asia/Yekaterinburg] PHP Fatal error:  Uncaught exception 'exceptions\QueryException' with message 'Unknown column 'm.author' in 'where clause'' in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php:25
+Stack trace:
+#0 /home/nikll/projects/test_ural_soft/libs/db/Db.php(49): exceptions\QueryException::create('Unknown column ...', 1054, '\n        select...')
+#1 /home/nikll/projects/test_ural_soft/libs/db/Db.php(59): db\Db->real_query('\n        select...')
+#2 /home/nikll/projects/test_ural_soft/libs/db/Db.php(108): db\Db->query('\n        select...')
+#3 /home/nikll/projects/test_ural_soft/app.php(97): db\Db->fetch_all('\n        select...')
+#4 /home/nikll/projects/test_ural_soft/www/index.php(2): require_once('/home/nikll/pro...')
+#5 {main}
+  thrown in /home/nikll/projects/test_ural_soft/libs/exceptions/QueryException.php on line 25
